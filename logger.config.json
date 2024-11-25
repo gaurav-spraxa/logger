@@ -1,0 +1,39 @@
+{
+    "logging": {
+        "stdout": true,
+        "level": "info",
+        "customLevels": {
+            "clienterror": 70
+        },
+        "logStreams": [
+            {
+                "stream": "main",
+                "filename": "./logs/Cat_Export-%DATE%",
+                "logLevel": "info"
+            },
+            {
+                "stream": "error",
+                "filename": "./logs/Cat_Export-%DATE%-error",
+                "logLevel": "error"
+            },
+            {
+                "stream": "error",
+                "filename": "./logs/cat-viewer-%DATE%-error",
+                "logLevel": "clienterror"
+            }
+        ],
+        "showErrorsInMainStream": [
+            "info",
+            "warn"
+        ],
+        "max_logs": "14d"
+    },
+    "httpConfig": false,
+    "prettyPrint": {
+        "colorize": false,
+        "levelFirst": true,
+        "ignore": "pid,hostname",
+        "translateTime": "SYS:h:MM:ss TT Z o",
+        "messageFormat": "Message - {msg}"
+    }
+}
